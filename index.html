@@ -784,91 +784,38 @@
   </head>
 
   <body>
-    <!--
-    <amp-state
-       id = "remoto"
-       src="https://cornavi.herokuapp.com/api/v1/electrico/circuitos/cart.json?clientId=CLIENT_ID(uid)&_=RANDOM">
-     </amp-state>
-    -->
     <amp-sidebar id="drawermenu" layout="nodisplay">
-      <!--
-      <a href="https://servicios.coronavid.cl" class="caps text-decoration-none block p1">Servicios</a>
-      <a href="https://shop.coronavid.cl" class="caps text-decoration-none block p1">Shop</a>
-
-      <hr>
-      <a class="caps text-decoration-none block p1" 
-        href="https://coronavid.cl/santiago">Santiago</a> 
-
-      <a class="caps text-decoration-none block p1" 
-        href="https://coronavid.cl/providencia">Providencia</a> 
-      <a class="caps text-decoration-none block p1"
-        href="https://coronavid.cl/ñuñoa">Ñuñoa</a>
-      -->
       <a class="caps text-decoration-none block p1"
         href="https://cdc.gov/spanish">CDC</a>
     </amp-sidebar>
 
     <div id="abe-preview-header" 
       class="ampstart-headerbar fixed flex justify-start items-center top-0 left-0 right-0 pl2 pr4">
-      <!--
-      <a href=".." class="caps text-decoration-none">
-        <i class="align-middle inline-block mr1">
-          <svg fill="#000000" 
- 	    height="24" viewBox="0 0 24 24" 
-	    width="24" xmlns="http://www.w3.org/2000/svg">
-	    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-	    <path d="M0 0h24v24H0z" fill="none"/>
-	  </svg>
-        </i>
-     </a>
-     -->
 
-     <!--
-      <amp-img srcset="/img/logo_flash.png" 
-	width="424" 
-	height="88" 
-	alt="logo flash">
-      </amp-img>
-      -->
       <amp-img srcset="/safari-pinned-tab.svg" 
         width="24" 
         height="24" 
         alt="logo flash">
       </amp-img>
 
-     <!---
-      <h1 id="abe-preview-header-title" 
-        class="h3 center truncate caps">
-        (:)     
-      </h1>
-      -->
       <section amp-access="NOT loggedIn">
         <template amp-access-template type="amp-mustache">
-	<!--
-         {{presupuesto_local}}-local
-	 -->
-	 
         </template>
       </section>
-
 
       <section amp-access="loggedIn">
-
         <template amp-access-template type="amp-mustache">
-        {{circuito}}
-	<!--
-	  {{auth_token}}
-	{{presupuesto_local}}-local {{dueno_local}} | remoto-{{presupuesto_remoto}}
-	  {{dueno_remoto}} | current_user {{current_user}}
-	-->
-	{{current_user}}          
+          {{circuito}}
+          {{current_user}}          
         </template>
-
       </section>
+
     </div>
 
     <div id="abe-preview">
+
       <div class="ampstart-card m1">
+
         <div class="header">
  	  <a id="sample-menu" on="tap:drawermenu.toggle">
 	    <amp-img srcset="/img/ic_menu_white_1x_web_24dp.png 1x, /img/ic_menu_white_2x_web_24dp.png 2x" 
@@ -877,272 +824,112 @@
 	     alt="navigation">
 	    </amp-img>
 	  </a>
-	  <!---
-	  <form method="GET" action="https://shop.coronavid.cl/productos/10" 
-	    target="_top">
-	    <input name="search" type="search" placeholder="Buscar">
-	    <a id="sample-logo" href="/">Designer</a> 
-	    <input type="submit" value="">
-	  </form>
-	  -->
-	</div>
-        <h1 class="m1">CoronaVid</h2>
-	<h2 class="m1">Autoyuda CoronaVirus COVID-19</h3>
-        <h4 class="m1">Más abajo podrá seleccionar los síntomas compatibles con el Corona Virus, de acuerdo a información que Ud. puede consultar en la Organización Mundial de Salud: OMS. </h4>
-
-        <h5 class="m1">Esto es una contribución personal de Alexander Espinosa y no es una opinión médica.</h5>
-
-
-
-	<div class="m1">
-	  <amp-social-share type="twitter" width="30" height="22"></amp-social-share>
-
-
-         <!---
-	  <amp-social-share type="facebook" width="30" height="22" data-param-app_id="1777886622479021"></amp-social-share>
-         -->
-
-	  <amp-social-share type="gplus" width="30" height="22"></amp-social-share>
-
-	  <amp-social-share type="email" width="30" height="22"></amp-social-share>
-
-	  <amp-social-share type="pinterest" width="33" height="22"></amp-social-share>
 	</div>
 
-        <p id="product-description"
-          class="m1">
-           COVID-19 se caracteriza por tener síntomas leves como secreciones nasales, dolores de garganta, tos y fiebre. La enfermedad puede ser más grave en algunas personas y provocar neumonía o dificultades respiratorias. Las personas de edad avanzada y las personas con otras afecciones médicas (como asma, diabetes o cardiopatías) pueden ser más vulnerables, enfermar de gravedad y fallecer si no son atendidas a tiempo.
-         Los signos y síntomas pueden ser:
-        </p>
+        <div class="product-gallery">
 
-        <ul>
-          <li>Pérdida de Olfato y Sabor </li>
-          <li>Problemas digestivos, como Vómitos y Diarreas </li>
-          <li>Secreciones nasales </li>
-          <li>Dolores de garganta </li>
-          <li>Tos </li>
-          <li>Fiebre </li>
-          <li>Dificultad para respirar (en casos graves) </li>
-        </ul>
+ 	  <amp-carousel id="blue-apple-carousel"
+	    width="1024"
+	    height="682"
+	    layout="responsive"
+	    type="slides"
+	    [slide]="product.selectedSlideForBlue"
+	    on="slideChange: AMP.setState({product: {selectedSlide: event.index, selectedSlideForBlue: event.index}})"
+	    class="fadeIn"
+	    [hidden]="product.selectedColor != 'blue'">
+	    <div 
+	      role="button"
+	      tabindex="0">
+	      <a class="ampstart-btn caps m2 close-gallery-button"
+	        href = "tel:6003607777">
+	        SALUD RESPONDE
+	      </a>
+	      <amp-img src="/img/sintomas/secreciones_nasales_01.jpg"
+	        width="1024"
+	        height="682"
+	        layout="responsive"
+	        on="tap:gallery-lightbox"
+	        role="button"
+	        tabindex="0">
+	      </amp-img>
+	    </div>
+	  </amp-carousel>
 
-        <p id="product-description"
-          class="m1">
-          La información técnica actualizada sobre el Corona Virus COVID-19 la puede Ud. obtener en https://www.cdc.gov/spanish/.
-        </p>
-        <!--
-	<button class="ampstart-btn caps m1 mb3" 
-	  on="tap:watch-video-lightbox">
-	  Ver Video 
-	</button>
-        -->
-     <section amp-access="loggedIn">
-	    <!--
-	      Carruseles
-	    -->
+          <amp-state id="product">
+	    <script type="application/json">
+              {
+	        "selectedColor": "blue",
+	        "selectedPotencia": "I",
+	        "selectedSlide": 0,
+		"selectedSlideForBlue": 0,
+		"moreItemsPageIndex": 0,
+		"hasMorePages": false,
+		"circuitos": {
+		  "C": "C: "
+		},
 
-	     <div class="product-gallery">
-		<amp-carousel id="blue-apple-carousel"
-		  width="1024"
-		  height="682"
-		  layout="responsive"
-		  type="slides"
-		  [slide]="product.selectedSlideForBlue"
-		  on="slideChange: AMP.setState({product: {selectedSlide: event.index, selectedSlideForBlue: event.index}})"
-		  class="fadeIn"
-		  [hidden]="product.selectedColor != 'blue'">
-		  <div 
-		    role="button"
-		    tabindex="0">
-		    <a class="ampstart-btn caps m2 close-gallery-button"
-		      href = "tel:6003607777">
-		      SALUD RESPONDE
-		    </a>
-		    <amp-img src="/img/sintomas/secreciones_nasales_01.jpg"
-		      width="1024"
-		      height="682"
-		      layout="responsive"
-		      on="tap:gallery-lightbox"
-		      role="button"
-		      tabindex="0">
-		    </amp-img>
-		  </div>
-		</amp-carousel>
-
-	      <amp-state id="product">
-		<script type="application/json">
-		  {
-		    "selectedColor": "blue",
-		    "selectedPotencia": "I",
-		    "selectedSlide": 0,
-		    "selectedSlideForBlue": 0,
-		    "moreItemsPageIndex": 0,
-		    "hasMorePages": false,
-		      "circuitos": {
-			"C": "C: ",
-			"D": "D: ",
-			"E": "E: ",
-			"N": "N: ",
-			"Z": "Z: ",
-			"A": "A: ",
-			"M": "M: ",
-			"L": "L: ",
-			"H": "H: ",
-			"I": "I: ",
-			"R": "R: ",
-			"S": "S: "
+		"blue": {
+		  "ids" : {
+		    "0": "100"
 			},
-
-		   "blue": {
-		      "ids" : {
-			"0": "100"
-			},
-		      "nombres": {
-			"0": "Secreciones Nasales."
+		  "nombres": {
+		    "0": "Secreciones Nasales."
 		      },
-		      "circuitos": {
-			"0": "I"
+		  "circuitos": {
+		    "0": "I"
 		      },
-		      "potencias": {
-			"C": "4400 W",
-			"D": "3520 W",
-			"E": "8800 W",
-			"N": "3520 W",
-			"Z": "3520 W",
-			"A": "3520 W",
-			"S": "3520 W",
-			"M": "3520 W",
-			"L": "3520 W",
-			"H": "3520 W",
-			"I": "2200 W",
-			"R": "2200 W"
+		  "potencias": {
+		    "C": "4400 W"
 		      },
-		     "defaultPotencia": "I"
+		  "defaultPotencia": "I"
 		    }
 		  }
-		</script>
-	      </amp-state>
+	    </script>
+	  </amp-state>
 
-	      <p class="price-description"> Seleccionado:
-		<span [text]="product[product.selectedColor].nombres[product.selectedSlide]">Tos.</span> </p>
+          <p class="price-description"> Seleccionado:
+          <span [text]="product[product.selectedColor].nombres[product.selectedSlide]">Tos.</span> </p>
 
-	     <form id="order"
-	       method="POST"
-	       action-xhr="https://cornavi.herokuapp.com/api/v1/electrico/circuitos/addToCircuito.json"
-	       target="_top"
-	       on="submit-success:AMP.setState({ presupuesto: { Iniciado: (presupuesto.Iniciado + 1)}}),carrusel-list.refresh, cart-list.refresh, ocupacion-list.refresh"
-	       class="flex flex-wrap m1">
+	  <form id="order"
+	    method="POST"
+	    action-xhr="https://cornavi.herokuapp.com/api/v1/electrico/circuitos/addToCircuito.json"
+	    target="_top"
+	    on="submit-success:AMP.setState({ presupuesto: { Iniciado: (presupuesto.Iniciado + 1)}}),carrusel-list.refresh, cart-list.refresh, ocupacion-list.refresh"
+	    class="flex flex-wrap m1">
 
-               <div>
+            <input type="submit"
+              class="ampstart-btn caps"
+              name=" Agregar Síntoma "
+              value="  Agregar Síntoma ">
 
-                 <div class="items-center flex">
-                   <input type="submit"
-                     class="ampstart-btn caps"
-                     name=" Agregar Síntoma "
-                     value="  Agregar Síntoma ">
-                 </div>
-         
-                 <div class="items-center flex">
-                   <label for="grupos">Grupos de Síntomas:</label>
-                 </div>
+	    <input type="hidden"
+	      name="carga_id"
+	      value = "844"
+	      [value] ="product[product.selectedColor].ids[product.selectedSlide]">
+	    <input name="clientId"
+	      type="hidden"
+	      value="CLIENT_ID(uid)"
+	      data-amp-replace="CLIENT_ID">
 
-		 <div class="items-center flex">
-                  <!--
-		  <label for="color">Síntoma</label>
-                  -->
-		  <amp-selector name="color"
-		    layout="container"
-		    [selected]="product.selectedColor"
-		    on="select:AMP.setState({
-				product: {
-				  selectedColor: event.targetOption,
-				  selectedSlide: 0,
-				  selectedSlideForBlue: 0,
-				  selectedSlideForCoral: 0,
-				  selectedSlideForRed: 0,
-				  selectedSlideForGreen: 0,
-				  selectedSlideForYellow: 0,
-				  selectedPotencia: product[event.targetOption].sizes[product.selectedPotencia] != 'inadecuado' ? product.selectedPotencia : product[event.targetOption].defaultPotencia
-				}
-			      })">
+            <input name="auth_token"
+	      type="hidden"
+	      value="AUTHDATA(auth_token)"
+	      data-amp-replace="AUTHDATA">
 
+            <div submit-success>
+              <template type="amp-mustache">
+	        {{error}}
+              </template>
+	    </div>
 
-		    <ul class="p0 m1">
+	    <div submit-error>
+	      <template type="amp-mustache">
+	       {{error}}
+	      </template>
+	    </div>
 
-		      <li>
-			<div option="blue"
-                          selected
-			  class="square blue"></div>
-		      </li>
-
-		      <li>
-			<div option="green"
-			  class="square green"></div>
-		      </li>
-		      <li>
-			<div option="golden"
-			  class="square golden"></div>
-		      </li>
-		      <li>
-			<div option="coral"
-			  class="square coral"></div>
-		      </li>
-		      <li>
-			<div option="red"
-			  class="square red"></div>
-		      </li>
-		    </ul>
-		  </amp-selector>
-		</div>
-
-                <label for="quantity">Días de Duración:</label>
-		<div class="items-center flex">
-		  <amp-selector name="quantity"
-		    layout="container">
-		    <ul class="p0 m1">
-		      <li option="1"
-			selected>1</li>
-		      <li option="2">2</li>
-		      <li option="3">3</li>
-                      <li option="4">4</li>
-                      <li option="5">5</li>
-
-		    </ul>
-		  </amp-selector>
-		</div>
-              </div>
-
-	    <p class="price-description">
-	      <span > Derivación: </span>
-	      <span [text]="product.circuitos[product.selectedPotencia]">I</span>
-	      <span [text]="product[product.selectedColor].potencias[product.selectedPotencia]">200 W</span>
-	    </p>
-	  <input type="hidden"
-	    name="carga_id"
-	    value = "844"
-	    [value] ="product[product.selectedColor].ids[product.selectedSlide]">
-	  <input name="clientId"
-	    type="hidden"
-	    value="CLIENT_ID(uid)"
-	    data-amp-replace="CLIENT_ID">
-
-          <input name="auth_token"
-            type="hidden"
-            value="AUTHDATA(auth_token)"
-            data-amp-replace="AUTHDATA">
-
-
-	  <div submit-success>
-	    <template type="amp-mustache">
-	      {{error}}
-	    </template>
-	  </div>
-	  <div submit-error>
-	    <template type="amp-mustache">
-	      {{error}}
-	    </template>
-	  </div>
-	</form>
-   </section>
+	  </form>
+        </section>
 
 	<section>
 	  <amp-list
