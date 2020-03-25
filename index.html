@@ -1970,6 +1970,27 @@
                 </button>
              </div>
 
+	<p>Selected slide: <span [text]="+sSlide + 1">1</span>/3</p>
+
+	<amp-carousel controls
+	  type="slides"
+	  width="400"
+	  height="300"
+	  [slide]="sSlide"
+	  on="slideChange:AMP.setState({ sSlide: event.index })">
+	  <amp-img src="https://help.coronavid.cl/img/sintomas/diabetes_01.jpg",
+
+	    layout="fill"></amp-img>
+	  <amp-img src="https://help.coronavid.cl/img/sintomas/cardiopatia_01.jpg"
+
+	    layout="fill"></amp-img>
+	  <amp-img src="https://help.coronavid.cl/img/sintomas/taquipnea_03.jpg",
+	    layout="fill"></amp-img>
+	</amp-carousel>
+
+
+
+
 
 
               <p class="price-description"> Síntomas Agregados
