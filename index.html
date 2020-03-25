@@ -1379,7 +1379,7 @@
 
               <div class="my2">
                 <button 
-                  on="tap:AMP.setState( { product: { selectedCargas: product.selectedCargas + 1}, itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[2]) } ),item-list.refresh "
+                  on="tap:AMP.setState( { product: { selectedCargas: product.selectedCargas + 1}, itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[2]})] )} ),item-list.refresh "
                   class="ampstart-btn ampstart-btn-secondary ml1 caps">Agrega
                 </button>
              </div>
@@ -1645,48 +1645,6 @@
 		<amp-image-lightbox 
 		  id="gallery-lightbox"
 		  layout="nodisplay">
-                 <!--
-                  <div
-		   id = "zoom"
-		   class = "clearfix" >
-		     <div 
-		       class = "left" >
-		       <div
-			  role="button"
-			  tabindex="0" >
-			  <form method   = "POST"
-			    action-xhr = "https://cornavi.herokuapp.com/api/v1/electrico/circuitos/deleteElectrodomestico.json"
-			      target    = "_top"
-			      on = "submit-success:carrusel-list.refresh,cart-list.refresh">
-			     <input name = "clientId" 
-				 type = "hidden" 
-				 value = "CLIENT_ID(uid)" 
-				 data-amp-replace = "CLIENT_ID">
-			     <input 
-                             hidden
-			     name = "id" 
-			     [value] = "id" > 
-			     <button 
-				class="ampstart-btn caps m2 borrar-gallery-button"
-				type = "submit" > Borrar
-			     </button>
-			  </form>
-                        </div>
-                     </div>
-		     <div
-		       class = "right" >
-			<div on="tap:gallery-lightbox.close"
-			  role="button"
-			  tabindex="0">
-			  <button class="ampstart-btn caps m2 close-gallery-button"
-			    on="tap:gallery-lightbox.close"
-			    role="button"
-			    tabindex="0">
-			    Cerrar
-			  </button>
-			</div>
-		     </div>
-                  -->
                     <div class = "right close-gallery-button" >
 
 		      <button class="ampstart-btn caps m2"
@@ -1822,40 +1780,6 @@
                   class="ampstart-btn ampstart-btn-secondary ml1 caps">Agrega
                 </button>
              </div>
-
-	<p>Selected slide: <span [text]="+sSlide + 1">1</span>/3</p>
-
-	<amp-carousel controls
-	  type="slides"
-	  width="400"
-	  height="300"
-	  [slide]="sSlide"
-          lightbox
-	  on="slideChange:AMP.setState({ sSlide: event.index })">
-	  <amp-img src="https://help.coronavid.cl/img/sintomas/diabetes_01.jpg",
-
-	    layout="fill"></amp-img>
-	  <amp-img src="https://help.coronavid.cl/img/sintomas/cardiopatia_01.jpg"
-
-	    layout="fill"></amp-img>
-	  <amp-img src="https://help.coronavid.cl/img/sintomas/taquipnea_03.jpg",
-	    layout="fill"></amp-img>
-	</amp-carousel>
-
-
-
-
-
-
-              <p class="price-description"> Síntomas Agregados
-                <span [text]="product.selectedCargas">...</span> </p>
-
-	      <p class="price-description"> Seleccionado:
-		<span [text]="product[product.selectedColor].nombres[product.selectedSlide]">Secreciones Nasales.</span> </p>
-
-              <p class="price-description"> SelectedSlide:
-                <span [text]="product.selectedSlideForBlue">.</span> </p>
-
 
 
       <section>
