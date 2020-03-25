@@ -813,13 +813,12 @@
 	  </a>
 	</div>
 
-      <section>
         <div class="product-gallery">
 
  	  <amp-carousel id="blue-apple-carousel"
 	    width="1024"
 	    height="682"
-	    layout="fixed"
+	    layout="responsive"
 	    type="slides"
 	    [slide]="product.selectedSlideForBlue"
 	    on="slideChange: AMP.setState({product: {selectedSlide: event.index, selectedSlideForBlue: event.index}})"
@@ -1044,7 +1043,6 @@
 	    </div>
 
 	 </amp-carousel>
-       </section>
 
            <amp-state id="product">
              <script type="application/json">
