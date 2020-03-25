@@ -842,37 +842,184 @@
 	    </div>
 	  </amp-carousel>
 
-          <amp-state id="product">
-	    <script type="application/json">
-              {
-	        "selectedColor": "blue",
-	        "selectedPotencia": "I",
-	        "selectedSlide": 0,
-		"selectedSlideForBlue": 0,
-		"moreItemsPageIndex": 0,
-		"hasMorePages": false,
-		"circuitos": {
-		  "C": "C: "
-		},
 
-		"blue": {
-		  "ids" : {
-		    "0": "100"
-			},
-		  "nombres": {
-		    "0": "Secreciones Nasales."
-		      },
-		  "circuitos": {
-		    "0": "I"
-		      },
-		  "potencias": {
-		    "C": "4400 W"
-		      },
-		  "defaultPotencia": "I"
-		    }
-		  }
-	    </script>
-	  </amp-state>
+
+        <amp-state id="product">
+                <script type="application/json">
+                  { "selectedCargas":  1,
+                    "selectedColor": "blue",
+                    "selectedPotencia": "I",
+                    "selectedSlide": 0,
+                    "selectedSlideForBlue": 0,
+                    "selectedSlideForCoral": 0,
+                    "selectedSlideForRed": 0,
+                    "selectedSlideForGolden": 0,
+                    "selectedSlideForGreen": 0,
+                    "selectedCargaQty": 1,
+                    "moreItemsPageIndex": 0,
+                    "hasMorePages": false,
+                      "circuitos": {
+                        "C": "C: ",
+                        "D": "D: ",
+                        "E": "E: ",
+                        "N": "N: ",
+                        "Z": "Z: ",
+                        "A": "A: ",
+                        "M": "M: ",
+                        "L": "L: ",
+                        "H": "H: ",
+                        "I": "I: ",
+                        "R": "R: ",
+                        "S": "S: "
+                        },
+
+                  "blue": {
+                      "ids" : {
+                        "0": "100",
+                        "1": "101",
+                        "2": "102",
+                        "3": "103"
+                      },
+
+                      "nombres": {
+                        "0": "Secreciones Nasales.",
+                        "1": "Dolores de Garganta.",
+                        "2": "Pérdida de Olfato y Sabor.",
+                        "3": "Problemas Digestivos como Vómitos y Diarrea."
+                      },
+
+                      "imagenes": {
+                        "0": "https://help.coronavid.cl/img/sintomas/secreciones_nasales_01.jpg",
+                        "1": "https://help.coronavid.cl/img/sintomas/dolores_de_garganta_01.jpg",
+                        "2": "https://help.coronavid.cl/img/sintomas/sin_olfato_ni_sabor.jpeg",
+                        "3": "https://help.coronavid.cl/img/sintomas/problemas_digestivos.jpg"
+                      },
+
+                      "circuitos": {
+                        "0": "I",
+                        "1": "I",
+                        "2": "I",
+                        "3": "I"
+                      },
+
+                      "potencias": {
+                        "C": "4400 W",
+                        "D": "3520 W",
+                        "E": "8800 W",
+                        "N": "3520 W"
+                      },
+
+                     "defaultPotencia": "I"
+                    },
+                    "green": {
+                      "ids" : {
+                        "0": "200",
+                        "1": "201"
+                        },
+
+                      "nombres": {
+                        "0": "Tos Seca.",
+                        "1": "Tos Seca."
+                      },
+
+                      "imagenes": {
+                        "0": "https://help.coronavid.cl/img/sintomas/tos_03.jpg",
+                        "1": "https://help.coronavid.cl/img/sintomas/tos_02.png"
+                      },
+
+                      "circuitos": {
+                        "0": "CESFAM",
+                        "1": "SAPU"
+                      },
+
+                      "potencias": {
+                        "C": "inadecuado",
+                        "D": "inadecuado"
+                      },
+                      "defaultPotencia": "I"
+                    },
+
+                    "golden": {
+                      "ids" :{
+                        "0": "300"
+                      },        
+                      "nombres" : {
+                        "0": "Fiebre."
+                      },
+                      "imagenes": {
+                        "0": "https://help.coronavid.cl/img/sintomas/fiebre_04.jpg"
+                      },
+                      "circuitos":{
+                        "0": "M"
+                      },
+                      "potencias": {
+                        "C": "inadecuado"
+                      },
+                      "defaultPotencia": "M"
+                    },
+
+                    "coral": {
+                      "ids": {
+                        "0": "400"
+                      },
+                      "nombres": {
+                        "0": "Falta de Aire."
+                      },
+                      "imagenes": {
+                        "0": "https://help.coronavid.cl/img/sintomas/taquipnea_03.jpg"
+                      },
+                      "circuitos": {
+                        "0": "N"
+                      },
+                      "potencias": {
+                        "I": "inadecuado"
+                      },
+                      "defaultPotencia": "R"
+                    },
+
+                    "red": {
+                      "ids": {
+                        "0": "500",
+                        "1": "501",
+                        "2": "502",
+                        "3": "503"
+                      },
+                      "nombres": {
+                        "0": "Hipertensión Arterial.",
+                        "1": "Diabetes.",
+                        "2": "Asma.",
+                        "3": "CardioPatía."
+                      },
+                      "imagenes": {
+                        "0": "https://help.coronavid.cl/img/sintomas/hipertension_01.jpeg",
+                        "1": "https://help.coronavid.cl/img/sintomas/diabetes_01.jpg",
+                        "2": "https://help.coronavid.cl/img/sintomas/asma_01.jpg",
+                        "3": "https://help.coronavid.cl/img/sintomas/cardiopatia_01.jpg"
+                      },
+                      "circuitos": {
+                        "0": "E",
+                        "1": "E",
+                        "2": "E",
+                        "3": "E"
+
+                      },
+                     },
+                      "potencias": {
+                        "I": "inadecuado",
+                        "C": "inadecuado",
+                        "D": "inadecuado",
+                        "E": "8800 W"
+                      },
+                      "defaultPotencia": "E"
+                    }
+
+                  }
+                </script>
+              </amp-state>
+
+
+
+
 
           <p class="price-description"> Seleccionado:
           <span [text]="product[product.selectedColor].nombres[product.selectedSlide]">Tos Seca.</span> </p>
