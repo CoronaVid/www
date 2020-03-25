@@ -877,14 +877,6 @@
 	     alt="navigation">
 	    </amp-img>
 	  </a>
-	  <!---
-	  <form method="GET" action="https://shop.coronavid.cl/productos/10" 
-	    target="_top">
-	    <input name="search" type="search" placeholder="Buscar">
-	    <a id="sample-logo" href="/">Designer</a> 
-	    <input type="submit" value="">
-	  </form>
-	  -->
 	</div>
         <h1 class="m1">CoronaVid</h2>
 	<h2 class="m1">Autoyuda CoronaVirus COVID-19</h3>
@@ -896,7 +888,6 @@
 
 	<div class="m1">
 	  <amp-social-share type="twitter" width="30" height="22"></amp-social-share>
-
 
          <!---
 	  <amp-social-share type="facebook" width="30" height="22" data-param-app_id="1777886622479021"></amp-social-share>
@@ -929,8 +920,11 @@
           class="m1">
           La información técnica actualizada sobre el Corona Virus COVID-19 la puede Ud. obtener en https://www.cdc.gov/spanish/.
         </p>
+
         <section>
+
 	  <div class="product-gallery">
+
 	    <amp-carousel id="blue-apple-carousel"
 	      width="1024"
 	      height="682"
@@ -940,6 +934,7 @@
 	      on="slideChange: AMP.setState({product: {selectedSlide: event.index, selectedSlideForBlue: event.index}})"
 	      class="fadeIn"
 	      [hidden]="product.selectedColor != 'blue'">
+
 	      <div 
 	        role="button"
 		tabindex="0">
@@ -955,12 +950,15 @@
 		  on="tap:gallery-lightbox"
 		  role="button"
 		  tabindex="0">
+
 		</amp-img>
+
 	      </div>
 
 	      <div 
 	        role="button"
 		tabindex="0">
+
                 <button 
                   on="tap:AMP.setState( { product: { selectedCargas: product.selectedCargas + 1}, itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[1]}]) } ),item-list.refresh "
                   class="ampstart-btn caps m2 close-gallery-button">Agrega
@@ -973,17 +971,21 @@
 		  on="tap:gallery-lightbox"
 		  role="button"
 		  tabindex="0">
+
 		</amp-img>
 
               </div>
 
               <div 
+
                 role="button"
                 tabindex="0">
+
                 <button 
                   on="tap:AMP.setState( { product: { selectedCargas: product.selectedCargas + 1}, itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[2]}]) } ),item-list.refresh "
                   class="ampstart-btn caps m2 close-gallery-button">Agrega
                 </button>
+
                 <amp-img src="/img/sintomas/sin_olfato_ni_sabor.jpeg"
                   width="1024"
                   height="682"
@@ -991,15 +993,21 @@
                   on="tap:gallery-lightbox"
                   role="button"
                   tabindex="0">
+
                 </amp-img>
+
               </div>
+
               <div 
+
                 role="button"
                 tabindex="0">
+
                 <button 
                   on="tap:AMP.setState( { product: { selectedCargas: product.selectedCargas + 1}, itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[3]}]) } ),item-list.refresh "
                   class="ampstart-btn caps m2 close-gallery-button">Agrega
                 </button>
+
                 <amp-img src="/img/sintomas/problemas_digestivos.jpg"
                   width="1024"
                   height="682"
@@ -1007,15 +1015,21 @@
                   on="tap:gallery-lightbox"
                   role="button"
                   tabindex="0">
+
                 </amp-img>
+
               </div>
+
               <div
+
                 role="button"
                 tabindex="0">
+
                 <button 
                   on="tap:AMP.setState( { product: { selectedCargas: product.selectedCargas + 1}, itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[4]}]) } ),item-list.refresh "
                   class="ampstart-btn caps m2 close-gallery-button">Agrega
                 </button>
+
                 <amp-img src="/img/sintomas/tos_03.jpg"
 	          width="1024"
 	          height="682"
@@ -1023,15 +1037,20 @@
 		  on="tap:gallery-lightbox"
 		  role="button"
 		  tabindex="0">
+
 	        </amp-img>
+
               </div>
+
               <div
                 role="button"
                 tabindex="0">
+
                 <button 
                    on="tap:AMP.setState( { product: { selectedCargas: product.selectedCargas + 1}, itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[5]}]) } ),item-list.refresh "
                    class="ampstart-btn caps m2 close-gallery-button">Agrega
                 </button>
+
                 <amp-img src="/img/sintomas/tos_02.png"
 	          width="1024"
 		  height="682"
@@ -1039,15 +1058,20 @@
 		  on="tap:gallery-lightbox"
 		  role="button"
 		  tabindex="0">
+
 	        </amp-img>
+
               </div>
+
               <div
                 role="button"
                 tabindex="0">
+
                 <button 
                   on="tap:AMP.setState( { product: { selectedCargas: product.selectedCargas + 1}, itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[6]}]) } ),item-list.refresh "
                   class="ampstart-btn caps m2 close-gallery-button">Agrega
                 </button>
+
                 <amp-img src="/img/sintomas/fiebre_04.jpg"
 	          width="1024"
 	          height="682"
@@ -1055,15 +1079,20 @@
 	          on="tap:gallery-lightbox"
 	          role="button"
 	          tabindex="0">
+
 	        </amp-img>
+
               </div>
+
               <div
                 role="button"
                 tabindex="0">
+
                 <button 
                   on="tap:AMP.setState( { product: { selectedCargas: product.selectedCargas + 1}, itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[7]}]) } ),item-list.refresh "
                   class="ampstart-btn caps m2 close-gallery-button">Agrega
                 </button>
+
 	        <amp-img src="/img/sintomas/taquipnea_03.jpg"
 	          width="1024"
 	          height="682"
@@ -1072,14 +1101,18 @@
 		  role="button"
 		  tabindex="0">
 	        </amp-img>
+
               </div>
+
               <div
                 role="button"
                 tabindex="0">
+
                 <button 
                   on="tap:AMP.setState( { product: { selectedCargas: product.selectedCargas + 1}, itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[8]}]) } ),item-list.refresh "
                   class="ampstart-btn caps m2 close-gallery-button">Agrega
                 </button>
+
 	        <amp-img src="/img/sintomas/hipertension_01.jpeg"
 	          width="1024"
 		  height="682"
@@ -1087,15 +1120,20 @@
 		  on="tap:gallery-lightbox"
 		  role="button"
 		  tabindex="1">
+
 	        </amp-img>
+
               </div>
+
               <div
                 role="button"
                 tabindex="0">
+
                 <button 
                   on="tap:AMP.setState( { product: { selectedCargas: product.selectedCargas + 1}, itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[9]}]) } ),item-list.refresh "
                   class="ampstart-btn caps m2 close-gallery-button">Agrega
                 </button>
+
                 <amp-img src="/img/sintomas/diabetes_01.jpg"
 	          width="1024"
 	          height="682"
@@ -1103,15 +1141,20 @@
 	          on="tap:gallery-lightbox"
 	          role="button"
 	          tabindex="1">
+
 	        </amp-img>
+
               </div>
+
               <div
                 role="button"
                 tabindex="0">
+
                 <button 
                    on="tap:AMP.setState( { product: { selectedCargas: product.selectedCargas + 1}, itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[10]}]) } ),item-list.refresh "
                    class="ampstart-btn caps m2 close-gallery-button">Agrega
                 </button>
+
                 <amp-img src="/img/sintomas/asma_01.jpg"
                   width="1024"
                   height="682"
@@ -1119,15 +1162,20 @@
                   on="tap:gallery-lightbox"
                   role="button"
                   tabindex="1">
+
                 </amp-img>
+
               </div>
+
               <div
                 role="button"
                 tabindex="0">
+
                 <button 
                   on="tap:AMP.setState( { product: { selectedCargas: product.selectedCargas + 1}, itemsSrc: itemsSrc.concat([ { img: product[product.selectedColor].imagenes[11]}]) } ),item-list.refresh "
                   class="ampstart-btn caps m2 close-gallery-button">Agrega
                 </button>
+
                 <amp-img src="/img/sintomas/cardiopatia_01.jpg"
                   width="1024"
                   height="682"
@@ -1136,7 +1184,9 @@
                   role="button"
                   tabindex="1">
                 </amp-img>
+
               </div>
+
 	    </amp-carousel>
 
 	    <div 
@@ -1239,7 +1289,8 @@
               </script>
             </amp-state>
 
-            <section>
+            <div class=product-gallery>
+
               <amp-list
                 class="mt3"
                 layout="fixed-height"
@@ -1248,7 +1299,9 @@
                 binding="no"
                 [src] = "itemsSrc"
                 id="item-list" >
+
                 <template type="amp-mustache">
+
                   <amp-img width="100"
                     tabindex = 0
                     height="90"
@@ -1268,13 +1321,18 @@
                         value = "CLIENT_ID(uid)" 
                         data-amp-replace = "CLIENT_ID">
                       <button  type = "submit" >X</button>
+
                     </form>
+
                   </amp-img>
+
                 </template>
+
                 <div overflow
                   class = "list-overflow">
                   VER MAS
                 </div>
+
                 <div fallback>
                   <div class = "content">
                     <button 
@@ -1284,8 +1342,10 @@
                     </button>
                   </div>
                 </div>
+
               </amp-list>
-           </section>
+
+           </div>
 
          </div>
       </div>
